@@ -5,6 +5,6 @@ import com.manage.appointment.entity.User;
 import org.apache.coyote.BadRequestException;
 
 public interface IUserService {
-    public User registerUser(UserDTO user) throws BadRequestException;
+    public User registerUser(UserDTO user);
 
 }
