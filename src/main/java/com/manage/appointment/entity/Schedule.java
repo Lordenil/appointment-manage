@@ -1,0 +1,23 @@
+package com.manage.appointment.entity;
+
+import jakarta.persistence.*;
+import lombok.*;
+import java.time.DayOfWeek;
+import java.time.LocalTime;
+
+@Entity
+@Table(name = "schedules")
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
+public class Schedule {
+    @Id @GeneratedValue
+    private Long id;
+    private DayOfWeek day;
+    private LocalTime initialTime;
+    private LocalTime endTime;
+
+    @ManyToOne
+    @JoinColumn(name = "employee_id")
+    private Employee employee;
+}
