@@ -5,7 +5,6 @@ import com.manage.appointment.entity.User;
 import com.manage.appointment.repository.UserRepository;
 import com.manage.appointment.service.IUserService;
 import lombok.*;
-import org.apache.coyote.BadRequestException;
 import org.springframework.stereotype.Service;
 
 @Service

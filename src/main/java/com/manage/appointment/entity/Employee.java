@@ -10,10 +10,8 @@ import java.util.List;
 @NoArgsConstructor
 @AllArgsConstructor
 public class Employee {
-    @Id @GeneratedValue
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String name;
-
-    @OneToMany(mappedBy = "employee", cascade = CascadeType.ALL)
-    private List<Schedule> schedule;
 }
